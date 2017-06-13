@@ -24,3 +24,9 @@ filetype indent on " load filetype specific files
 set showmatch " highlight matching brackets
 set wildmenu " visual autocomplete commands
 set lazyredraw " don't bother with redraw
+
+" Searching
+set incsearch " incremental searching
+set hlsearch " highlight matches
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR> 

@@ -1,3 +1,10 @@
+" General
+set nocompatible
+syntax on
+filetype indent on " load filetype specific indent files
+filetype plugin on " load filetype specific plugins
+let mapleader = ","
+
 " Plugin stuff
 call plug#begin('~/.vim/plugged')
 
@@ -20,7 +27,6 @@ set shiftwidth=4 " 4 spaces indent
 set showcmd " show command
 set cursorline " highlight current line
 set number " show line numbers
-filetype indent on " load filetype specific files
 set showmatch " highlight matching brackets
 set wildmenu " visual autocomplete commands
 set lazyredraw " don't bother with redraw

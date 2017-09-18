@@ -10,6 +10,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'ying17zi/vim-live-latex-preview'
+Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
@@ -32,6 +34,10 @@ set number " show line numbers
 set showmatch " highlight matching brackets
 set wildmenu " visual autocomplete commands
 set lazyredraw " don't bother with redraw
+
+" Shortcuts
+nnoremap j gj
+nnoremap k gk
 
 " Searching
 set incsearch " incremental searching

@@ -1,0 +1,8 @@
+URxvt.scrollBar: false
+*foreground: #00cc00
+
+*cursor: #a8a19f
+*background: #1b1918
+
+urxvt.transparent: true
+urxvt.shading: 20

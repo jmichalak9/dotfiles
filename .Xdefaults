@@ -1,4 +1,5 @@
 URxvt.scrollBar: false
+urxvt.font: xft:monospace:size=11
 *foreground: #00cc00
 
 *cursor: #a8a19f

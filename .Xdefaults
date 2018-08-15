@@ -1,9 +1,15 @@
-URxvt.scrollBar: false
-urxvt.font: xft:monospace:size=11
 *foreground: #00cc00
-
-*cursor: #a8a19f
 *background: #1b1918
+*cursor: #a8a19f
 
+!! URxvt
+urxvt.scrollBar: false
+urxvt.font: xft:monospace:size=11
 urxvt.transparent: true
 urxvt.shading: 20
+
+!! Extensions
+urxvt.perl-ext-common: default,resize-font
+!! resize-font
+urxvt.keysym.C-Up:      resize-font:bigger
+urxvt.keysym.C-Down:     resize-font:smaller

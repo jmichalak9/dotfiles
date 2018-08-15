@@ -100,7 +100,7 @@ set $ws3 "3: &#xf193;"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
-set $ws7 "7"
+set $ws7 "7: &#xf03d;"
 set $ws8 "8: &#xf15b;"
 set $ws9 "9: &#xf076;"
 set $ws10 "10"
@@ -184,26 +184,27 @@ bindsym $mod+shift+x exec i3lock -i ~/Pictures/lockscreen.png
 bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%-
+bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Pictures/shots/'
 assign [class="Firefox"] $ws1
 for_window [class="Firefox"] focus
 assign [class="vlc"] $ws7
-assign [class="torrent"] $ws9
+assign [class="transmission"] $ws9
 #exec_always --no-startup-id notify-send -i ~/.scripts/larbs.png '<b>Welcome to LARBS:</b> Press Super+F1 for the manual.' -t 10000
 #
 #
 #
 #
-set $MENU "Audacity Calibre Firefox GIMP LibreOffice ranger qBitTorrent Terminal VLC"
+set $MENU "Audacity Calibre Firefox GIMP iPython LibreOffice ranger Transmission"
 bindsym Menu mode $MENU
 mode $MENU {
 bindsym a exec audacity, mode "default"
 bindsym c exec calibre, mode "default"
 bindsym f exec firefox, mode "default"
 bindsym g exec gimp, mode "default"
+bindsym i exec i3-sensible-terminal -e "ipython", mode "default"
 bindsym l exec libreoffice, mode "default"
-bindsym r exec i3-sensible-terminal, mode "default"
-bindsym q exec qbittorrent, mode "default"
-bindsym t exec i3-sensible-terminal, mode "default"
+bindsym r exec i3-sensible-terminal -e "ranger", mode "default"
+bindsym t exec transmission-gtk, mode "default"
 bindsym v exec vlc, mode "default"
 bindsym Return mode "default"
 bindsym Escape mode "default"

@@ -5,18 +5,7 @@ filetype indent on " load filetype specific indent files
 filetype plugin on " load filetype specific plugins
 let mapleader = ","
 
-" Plugin stuff
-call plug#begin('~/.vim/plugged')
-
-Plug 'morhetz/gruvbox'
-Plug 'ying17zi/vim-live-latex-preview'
-Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
-
-call plug#end()
-
 " Colors
-colorscheme gruvbox
 set background=dark
 syntax enable
 

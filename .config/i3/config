@@ -180,7 +180,7 @@ exec --no-startup-id exec bash $HOME/.fehbg
 
 for_window [class=".*"] border pixel 0
 hide_edge_borders both
-bindsym $mod+shift+x exec i3lock -i ~/Pictures/lockscreen.png
+bindsym $mod+F2 exec lock
 bindsym XF86AudioMute exec --no-startup-id "pamixer -t; pkill -RTMIN+11 i3blocks"
 bindsym XF86AudioRaiseVolume exec --no-startup-id "pamixer --allow-boost -i 5; pkill -RTMIN+11 i3blocks"
 bindsym XF86AudioLowerVolume exec --no-startup-id "pamixer --allow-boost -d 5; pkill -RTMIN+11 i3blocks"

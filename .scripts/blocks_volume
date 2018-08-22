@@ -1,0 +1,4 @@
+#!/bin/bash
+
+[[ $(pamixer --get-mute) = "true" ]] && echo -n 🔇 && exit
+echo 🔊 $(pamixer --get-volume)%

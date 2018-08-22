@@ -1,0 +1,17 @@
+#!/bin/bash
+
+percent=`cat /sys/class/power_supply/BAT0/capacity` || exit
+status=`cat /sys/class/power_supply/BAT0/status`
+time=`acpi | cut -d ' ' -f 5 | cut -d ':' -f -2`
+
+if [ "$percent" -ge 20 ]; then
+	color="#ffffff"
+elif [ "$percent" -ge 10 ]; then
+	color="#f98e1d"
+else
+	color="#d40000"
+fi
+
+[ "$status" = "Charging" ] && color="#00ff00"
+
+echo "<span color='$color'>`sed -e "s/,//g;s/Discharging/\&\#xf240;/;s/Charging/\&\#xf1e6;/;s/Unknown/\&\#xf128;/;s/Full/⚡/;s/ 0*/ /g;s/ :/ /g" <<<"$status"` `sed -e 's/$/%/' <<<"$percent"``echo " ($time)"`</span>"

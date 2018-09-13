@@ -144,10 +144,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym l resize shrink height 5 px or 5 ppt
+        bindsym semicolon resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -168,14 +168,15 @@ bindsym $mod+r mode "resize"
 bar {
 	font pango:awesome 10
 	position top
+    tray_output primary
     status_command i3blocks -c ~/.config/i3blocks/config
 }
 
 
 
 
-gaps inner 15
-gaps outer 15
+#gaps inner 15
+#gaps outer 15
 exec --no-startup-id exec bash $HOME/.fehbg
 
 for_window [class=".*"] border pixel 0

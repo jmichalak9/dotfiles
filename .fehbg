@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --bg-scale '/home/kuba/Pictures/wallpaper.jpg' 
+feh --bg-fill '/home/kuba/Pictures/wallpapers/tool_00310378.jpg' 

@@ -1,3 +1,3 @@
 exec i3
-feh --bg-scale ~/Pictures/wallpaper.jpg &
+wal -R &
 setxkbmap pl

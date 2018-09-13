@@ -33,4 +33,4 @@ i3lock \
 --indicator           \
 --timestr="%H:%M"  \
 --datestr="%d-%m-%Y" \
---keylayout 2         \
+#--keylayout 2         \

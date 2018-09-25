@@ -182,6 +182,8 @@ exec --no-startup-id exec bash $HOME/.fehbg
 for_window [class=".*"] border pixel 0
 hide_edge_borders both
 bindsym $mod+F2 exec lock
+bindsym $mod+i [instance="dropdowncalc"] scratchpad show; [instance="dropdowncalc"] move position center
+
 bindsym XF86AudioMute exec --no-startup-id "pamixer -t; pkill -RTMIN+11 i3blocks"
 bindsym XF86AudioRaiseVolume exec --no-startup-id "pamixer --allow-boost -i 5; pkill -RTMIN+11 i3blocks"
 bindsym XF86AudioLowerVolume exec --no-startup-id "pamixer --allow-boost -d 5; pkill -RTMIN+11 i3blocks"
@@ -191,7 +193,6 @@ for_window [class="Firefox"] focus
 assign [class="vlc"] $ws7
 assign [class="libreoffice"] $ws8
 assign [class="Transmission"] $ws9
-#exec_always --no-startup-id notify-send -i ~/.scripts/larbs.png '<b>Welcome to LARBS:</b> Press Super+F1 for the manual.' -t 10000
 #
 #
 #
@@ -212,3 +213,8 @@ bindsym Return mode "default"
 bindsym Escape mode "default"
 bindsym Menu mode "default"
 }
+for_window [instance="dropdowncalc"] floating enable
+for_window [instance="dropdowncalc"] resize set 625 400
+for_window [instance="dropdowncalc"] move scratchpad
+for_window [instance="dropdowncalc"] border pixel 3
+exec --no-startup-id i3-sensible-terminal -name dropdowncalc -e bash -i -c "ipython --profile=calc"

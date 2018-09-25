@@ -3,11 +3,10 @@
 *cursor: #a8a19f
 
 !! URxvt
-urxvt.scrollBar: false
-urxvt.font: xft:monospace:size=11
-urxvt.transparent: true
-urxvt.shading: 7
-URxvt.letterSpace: 1
+URxvt*scrollBar: false
+URxvt.font: xft:monospace:size=11
+URxvt.transparent: true
+URxvt.shading: 7
 
 !! black
 *color0: #1b1918
@@ -36,7 +35,7 @@ URxvt.letterSpace: 1
 
 
 !! Extensions
-urxvt.perl-ext-common: default,resize-font
+URxvt.perl-ext-common: default,resize-font
 !! resize-font
-urxvt.keysym.C-Up:      resize-font:bigger
-urxvt.keysym.C-Down:     resize-font:smaller
+URxvt.keysym.C-Up:      resize-font:bigger
+URxvt.keysym.C-Down:     resize-font:smaller

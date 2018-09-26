@@ -187,7 +187,7 @@ bindsym $mod+i [instance="dropdowncalc"] scratchpad show; [instance="dropdowncal
 bindsym XF86AudioMute exec --no-startup-id "pamixer -t; pkill -RTMIN+11 i3blocks"
 bindsym XF86AudioRaiseVolume exec --no-startup-id "pamixer --allow-boost -i 5; pkill -RTMIN+11 i3blocks"
 bindsym XF86AudioLowerVolume exec --no-startup-id "pamixer --allow-boost -d 5; pkill -RTMIN+11 i3blocks"
-bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Pictures/shots/'
+bindsym Print exec --no-startup-id screenshot
 assign [class="Firefox"] $ws1
 for_window [class="Firefox"] focus
 assign [class="vlc"] $ws7
@@ -197,7 +197,7 @@ assign [class="Transmission"] $ws9
 #
 #
 #
-set $MENU "Audacity Calibre Firefox GIMP iPython LibreOffice ranger Transmission"
+set $MENU "[A]udacity [C]alibre [F]irefox [G]IMP [i]Python [L]ibreOffice [r]anger [T]ransmission"
 bindsym Menu mode $MENU
 mode $MENU {
 bindsym a exec audacity, mode "default"
@@ -213,6 +213,7 @@ bindsym Return mode "default"
 bindsym Escape mode "default"
 bindsym Menu mode "default"
 }
+for_window [workspace=$ws1] layout stacking
 for_window [instance="dropdowncalc"] floating enable
 for_window [instance="dropdowncalc"] resize set 625 400
 for_window [instance="dropdowncalc"] move scratchpad

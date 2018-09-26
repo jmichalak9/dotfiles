@@ -1,0 +1,8 @@
+#!/bin/bash
+# take screenshot
+FOLDER=~/Pictures/screenshots/
+if [ ! -d $FOLDER ]; then
+    mkdir -p $FOLDER
+fi
+
+scrot -e 'mv $f ~/Pictures/screenshots/'

@@ -33,7 +33,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+q [con_id="__focused__" instance="^(?!dropdown).*$"] kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
@@ -182,7 +182,8 @@ exec --no-startup-id exec bash $HOME/.fehbg
 for_window [class=".*"] border pixel 0
 hide_edge_borders both
 bindsym $mod+F2 exec lock
-bindsym $mod+i [instance="dropdowncalc"] scratchpad show; [instance="dropdowncalc"] move position center
+bindsym $mod+i [instance="dropdownpython"] scratchpad show; [instance="dropdownpython"] move position center
+bindsym $mod+o [instance="dropdownshell"] scratchpad show; [instance="dropdownshell"] move position center
 
 bindsym XF86AudioMute exec --no-startup-id "pamixer -t; pkill -RTMIN+11 i3blocks"
 bindsym XF86AudioRaiseVolume exec --no-startup-id "pamixer --allow-boost -i 5; pkill -RTMIN+11 i3blocks"
@@ -214,8 +215,19 @@ bindsym Escape mode "default"
 bindsym Menu mode "default"
 }
 for_window [workspace=$ws1] layout stacking
-for_window [instance="dropdowncalc"] floating enable
-for_window [instance="dropdowncalc"] resize set 625 400
-for_window [instance="dropdowncalc"] move scratchpad
-for_window [instance="dropdowncalc"] border pixel 3
-exec --no-startup-id i3-sensible-terminal -name dropdowncalc -e bash -i -c "ipython --profile=calc"
+
+# dropdown ipython
+for_window [instance="dropdownpython"] floating enable
+for_window [instance="dropdownpython"] resize set 625 400
+for_window [instance="dropdownpython"] move scratchpad
+for_window [instance="dropdownpython"] border pixel 3
+exec --no-startup-id i3-sensible-terminal -name dropdownpython -e bash -i -c "ipython --profile=calc"
+
+# dropdown shell
+for_window [instance="dropdownshell"] floating enable
+for_window [instance="dropdownshell"] resize set 625 400
+for_window [instance="dropdownshell"] move scratchpad
+for_window [instance="dropdownshell"] border pixel 3
+exec --no-startup-id i3-sensible-terminal -name dropdownshell -e bash -i
+
+exec --no-startup-id nm-applet

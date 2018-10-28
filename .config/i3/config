@@ -198,18 +198,18 @@ assign [class="Transmission"] $ws9
 #
 #
 #
-set $MENU "[A]udacity [C]alibre [F]irefox [G]IMP [i]Python [L]ibreOffice [r]anger [T]ransmission"
+set $MENU "[a]udacity [c]alibre [f]irefox [g]imp [i]python [l]ibreoffice [r]anger [v]im [t]ransmission"
 bindsym Menu mode $MENU
 mode $MENU {
 bindsym a exec audacity, mode "default"
 bindsym c exec calibre, mode "default"
 bindsym f exec firefox, mode "default"
 bindsym g exec gimp, mode "default"
-bindsym i exec i3-sensible-terminal -e bash -i -c "ipython", mode "default"
+bindsym i exec i3-sensible-terminal -e "ipython", mode "default"
 bindsym l exec libreoffice, mode "default"
-bindsym r exec i3-sensible-terminal -e bash -i -c "ranger", mode "default"
+bindsym r exec i3-sensible-terminal -e "ranger", mode "default"
 bindsym t exec transmission-gtk, mode "default"
-bindsym v exec vlc, mode "default"
+bindsym v exec i3-sensible-terminal -e "vim", mode "default"
 bindsym Return mode "default"
 bindsym Escape mode "default"
 bindsym Menu mode "default"

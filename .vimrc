@@ -3,6 +3,7 @@ set nocompatible
 syntax on
 filetype indent on " load filetype specific indent files
 filetype plugin on " load filetype specific plugins
+set encoding=utf-8
 let mapleader = ","
 
 " Colors
@@ -23,10 +24,35 @@ set number " show line numbers
 set showmatch " highlight matching brackets
 set wildmenu " visual autocomplete commands
 set lazyredraw " don't bother with redraw
+" Split in a non-retarted way
+set splitbelow
+set splitright
+" Set g flag for search/replace
+set gdefault
+" Enable mouse
+set mouse=a
+set scrolloff=3
+set laststatus=2
 
 " Shortcuts
+" Split navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+" Remap new tab
+nnoremap <C-t> :tabnew<CR>
+" Remap close tab
+nnoremap <C-w> :tabclose<CR>
+" Remap next tab
+nnoremap <C-l> :tabnext<CR>
+" Remap close tab
+nnoremap <C-h> :tabprevious<CR>
+" Don't care if a line is wrapped
 nnoremap j gj
 nnoremap k gk
+" Save as a root
+noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Searching
 set incsearch " incremental searching
@@ -44,3 +70,12 @@ function! ToggleNumber()
         set relativenumber
     endif
 endfunc
+
+
+" Plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'Valloric/YouCompleteMe'
+Plug 'itchyny/lightline.vim'
+
+call plug#end()

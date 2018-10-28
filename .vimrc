@@ -1,3 +1,6 @@
+" TODO: write more comments
+" TODO: use folding
+" TODO: remap esc(?)
 " General
 set nocompatible
 syntax on
@@ -46,13 +49,17 @@ nnoremap <C-t> :tabnew<CR>
 nnoremap <C-w> :tabclose<CR>
 " Remap next tab
 nnoremap <C-l> :tabnext<CR>
-" Remap close tab
+" Remap previous tab
 nnoremap <C-h> :tabprevious<CR>
 " Don't care if a line is wrapped
 nnoremap j gj
 nnoremap k gk
 " Save as a root
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
+" Jump to <++>
+" TODO: implement <++> as a jump point when writing parentheses, writing in tags, etc.
+" TODO: do not highlight
+inoremap <leader><leader> <Esc>/<++><Enter>ciW
 
 " Searching
 set incsearch " incremental searching

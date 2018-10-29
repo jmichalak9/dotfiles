@@ -48,9 +48,9 @@ nnoremap <C-t> :tabnew<CR>
 " Remap close tab
 nnoremap <C-w> :tabclose<CR>
 " Remap next tab
-nnoremap <C-l> :tabnext<CR>
+nnoremap <C-m> :tabnext<CR>
 " Remap previous tab
-nnoremap <C-h> :tabprevious<CR>
+nnoremap <C-n> :tabprevious<CR>
 " Don't care if a line is wrapped
 nnoremap j gj
 nnoremap k gk

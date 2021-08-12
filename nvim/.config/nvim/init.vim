@@ -90,7 +90,7 @@ let g:go_auto_sameids = 1          " highlight matching identifiers
 let g:go_auto_type_info = 1        " Automatically get signature/type info for object under cursor     
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
-let g:go_def_mapping_enabled = 0
+" let g:go_def_mapping_enabled = 0
 " Make it possible to run metalinter if project has golangci.yml. Weird, but works.
 let g:go_metalinter_enabled = []
 " run :GoBuild or :GoTestCompile based on the go file
@@ -157,12 +157,6 @@ inoremap <silent><expr> <c-space> coc#refresh()
 nmap <silent> [c <Plug>(coc-diagnostic-prev)
 nmap <silent> ]c <Plug>(coc-diagnostic-next)
 
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
 " Use U to show documentation in preview window
 nnoremap <silent> U :call <SID>show_documentation()<CR>
 function! s:show_documentation()
@@ -175,7 +169,7 @@ endfunction
 
 
 " Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
+nmap rn <Plug>(coc-rename)
 
 " Remap for format selected region
 vmap <leader>f  <Plug>(coc-format-selected)

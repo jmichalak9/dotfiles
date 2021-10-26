@@ -1,2 +1,8 @@
 --type-add
 mod:*.{mod,sum}
+
+--type-add
+proto:*.{proto}
+
+--type-add
+libsonnet:*.{libsonnet}

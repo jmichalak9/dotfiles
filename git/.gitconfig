@@ -1,0 +1,12 @@
+[user]
+    name = Jakub Michalak
+    email = michalakjakub1999@gmail.com
+[pull]
+    rebase = true
+[diff]
+    colorMoved = zebra
+[merge]
+    ; TODO: change vimdiff to delta or sth
+    tool = vimdiff
+[alias]
+    top = log --oneline -n 10

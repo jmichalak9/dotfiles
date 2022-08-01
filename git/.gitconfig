@@ -9,6 +9,6 @@
     ; TODO: change vimdiff to delta or sth
     tool = vimdiff
 [alias]
-    top = log --oneline -n 10
+    top = log --pretty=format:'%C(yellow)%h %Cred%ai %t %Cblue%an%Cgreen%d %Creset%s'
 [includeIf "gitdir:~/work/"]
     path = .gitconfig-work

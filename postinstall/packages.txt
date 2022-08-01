@@ -2,11 +2,11 @@ birdtray
 blueman
 bluez
 bluez-utils
+bspwm
 calibre
 discord
 docker
 docker-compose
-easyeye
 entr
 flameshot
 fzf
@@ -20,9 +20,11 @@ nodejs
 noto-fonts-emoji
 npm
 obsidian
+picom
 pulseaudio-bluetooth
 python-pip
 rclone
+redshift
 ripgrep
 safeeyes
 shellcheck

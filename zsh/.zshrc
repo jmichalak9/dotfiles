@@ -22,6 +22,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+. ~/.asdf/asdf.sh
 
 eval "$(dircolors -b)"
 export PATH=$PATH:$HOME/.local/bin
@@ -37,9 +38,10 @@ export PATH=$PATH:$GOPATH/bin
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(zoxide init zsh)"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-. ~/.asdf/asdf.sh
 source <(kubectl completion zsh)
-source <(kafkactl completion zsh)
+if command -v kafkactl &> /dev/null; then
+	source <(kafkactl completion zsh)
+fi
 
 # Aliases
 if command -v batcat &> /dev/null; then

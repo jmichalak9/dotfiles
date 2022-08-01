@@ -10,3 +10,5 @@
     tool = vimdiff
 [alias]
     top = log --oneline -n 10
+[includeIf "gitdir:~/work/"]
+    path = .gitconfig-work
